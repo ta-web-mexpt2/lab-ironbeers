@@ -25,27 +25,19 @@ $ git push origin master
 
 ## Instructions
 
-## Iteration 1 - Layout
 
-Our starter code brings the basic configuration to run our server. The `/` route is set to render the `index` file, but first, we need to create our layout.
 
-Inside the `views` folder, create a `layout.hbs` file. Our layout should look like this:
+## Iteration 1 - The routes
 
-![image](https://user-images.githubusercontent.com/23629340/36723450-8bbcb164-1bb0-11e8-81c3-4fe939730bb9.png)
+On the `app.js` file you should include the routes or `end points` to reach every one of your methods to use our web verbs `POST GET etc...`  and create in **insomnia or postman** your work tree with all your methods to any of your end-points 
 
-You will find the `colors` and `fonts` on the `css` file. Remember to add the `{{{ body }}}` and link the `css` file to your **main layout**.
+The **insomnia or postman** create your workspace and must have three elements:
 
-The navbar includes three elements:
+- _Home_. ----> Should point to `/`.
+- _Beers_. ----> Should point to `/beers`.
+- _Random Beer_. ----> Should point to `/random-beers`.
 
-- _Home_. ----> Should navigate to `/`.
-- _Beers_. ----> Should navigate to `/beers`.
-- _Random Beer_. ----> Should navigate to `/random-beers`.
-
-## Iteration 2 - The Index
-
-On the `index.hbs` file you should include the **beer image** you have on the `/public/images`, with two buttons: `Check the Beers!` and `Check a Random Beer`. Both should navigate to the same routes we have on our nav.
-
-![image](https://user-images.githubusercontent.com/23629340/36723774-7d791ef2-1bb1-11e8-991b-39dbf4fd8a59.png)
+![image](https://res.cloudinary.com/drakarzamael/image/upload/v1579233962/ironlabs/insomnia.jpg)
 
 ## Iteration 3 - The Beers Route
 
