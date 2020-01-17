@@ -27,7 +27,7 @@ $ git push origin master
 
 
 
-## Iteration 1 - The routes
+## Iteration 1 - Config your workspace
 
 On the `app.js` file you should include the routes or `end points` to reach every one of your methods to use our web verbs `POST GET etc...`  and create in **insomnia or postman** your work tree with all your methods to any of your end-points 
 
@@ -39,11 +39,11 @@ The **insomnia or postman** create your workspace and must have three elements:
 
 ![image](https://res.cloudinary.com/drakarzamael/image/upload/v1579233962/ironlabs/insomnia.jpg)
 
-## Iteration 3 - The Beers Route
+## Iteration 2 - The Beers Route
 
-Create a `/beers` route inside the `app.js` file. You will also need a `beers.hbs` file to render every time we call this route.
+Create a `/beers` route inside the `app.js` file.
 
-Inside the `/beers` route, call to the `getBeers()` method of our **PunkAPI** package. The package will return you an array of 25 beers, and you should pass that array to the `beers.hbs` view.
+Inside the `/beers` route, call to the `getBeers()` method of our **PunkAPI** package. The package will return you an array of 25 beers, and you should return  `JSON` with status code and some nice message and you will be able to see in your workspace
 
 ```javascript
 punkAPI
@@ -54,29 +54,18 @@ punkAPI
   });
 ```
 
-Remember you should call the `render` method after getting the `beers` from our package. That means, inside the `then`.
+Remember you should send the `JSON` after getting the `beers` from our package. That means, inside the `then`.
 
-## Iteration 4 - Beers Views
+## Iteration 3 - The first 5 
 
-On the `beers.hbs` view, loop over the **beers array** using the `{{#each beers}} {{/each}}` block helper. On every iteration, you should call a `partial` passing the info about each beer.
+On the `beers` folder on your workspace create another route  `/first_five`, call the  **all beers method** from the iteration 2 and get back only the firts 5 beers.
 
-## Iteration 5 - Beer Partial
+## Iteration 4 - The last 5 
 
-Since each beer will be displayed in the same way, you should create a partial to display each beer. First, we need to register where our `partials` will be located. So you need to add the following code to the `app.js` file:
+On the `beers` folder on your workspace create another route  `/last_five`, call the  **all beers method** from the iteration 2 and get back only the last 5 beers.
 
-```javascript
-hbs.registerPartials(__dirname + '/views/partials');
-```
 
-Now, you should create a `partials` folder inside the `views`, and `beerPartial.hbs` file inside the `partials` folder. Our `beerPartial.hbs` will display an image, name, description, and tagline of the beer. It should look like the following:
-
-![image](https://user-images.githubusercontent.com/23629340/36724284-08872254-1bb3-11e8-9ff6-9b34346421ec.png)
-
-After creating the partial, and loop over the array of beers, on our `/beers` route, we should have the following:
-
-![image](https://user-images.githubusercontent.com/23629340/36724392-61fa7336-1bb3-11e8-8468-189908167e10.png)
-
-## Iteration 6 - Random Beer
+## Iteration 5 - Random Beer
 
 Finally, let's create our `/random-beer` route. Inside our route you should call the `getRandom()` method of the PunkAPI package and after receiving the info, render the `randomBeer.hbs` file and pass the data of the beer.
 
@@ -91,20 +80,11 @@ punkAPI
   });
 ```
 
-On the `randomBeer.hbs` you should print the random beer you get. You should display an image, name, description, tagline, food pairing and brewer tips. It should look like the following:
-
-![image](https://user-images.githubusercontent.com/23629340/36724536-c5924892-1bb3-11e8-8f22-fd1f8ce316af.png)
-
 ## Bonus Exercise
 
-Make all the beers of iteration 4 clickable. If you click on that beer, you need to render a page with the detailed information of that particular beer. You can reuse the same partial you used for iteration 5. Matter of fact, you should. That's what partials are for. The trick is to wrap an anchor tack around every beer that has the beer id in the href. Something like: 
-```
-<a href="/beers/thebeeridadf89p213">
-  ... previous html
-</a>
-```
-To find out how you can get the id out of the url on the backend, read this section of the <a href="http://expressjs.com/en/4x/api.html#req.params">Express docs</a>.
+On the `beers` folder on your workspace create another route  `/filter_date`, call the  **all beers method** from the iteration 2 and get back only the beers `first_brewed` when the year is smaller than 2010 remember to put some nice message on the json when return to you on your workspace.
 
-To find out how you can get an individual beer from the punkAPI using the beerId, check out the <a href="https://www.npmjs.com/package/punkapi-javascript-wrapper">punkAPI docs</a>.
+
+
 
 Happy Coding! :heart:
