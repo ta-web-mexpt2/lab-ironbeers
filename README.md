@@ -1,33 +1,6 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
-
-# IronBeers
-
-## Introduction
-
-In this lab you will create a web app where the user will be able to see a list of beers or check one randomly. For the exercise, we will work with the [PunkAPI](https://www.npmjs.com/package/punkapi-javascript-wrapper) database, through it's NPM Package. The package has some methods that retrieve beers with some info about them and fits perfect for our example.
-
-## Requirements
-
-- Fork this repo
-- Then clone this repo.
-
-## Submission
-
-- Upon completion, run the following commands
-
-```
-$ git add .
-$ git commit -m "done"
-$ git push origin master
-```
-
-- Create Pull Request so your TAs can check up your work.
-
-## Instructions
 
 
-
-## Iteration 1 - Config your workspace
+## Iteration 1 - Config your workspace --- DONE
 
 On the `app.js` file you should include the routes or `end points` to reach every one of your methods to use our web verbs `POST GET etc...`  and create in **insomnia or postman** your work tree with all your methods to any of your end-points 
 
@@ -36,8 +9,6 @@ The **insomnia or postman** create your workspace and must have three elements:
 - _Home_. ----> Should point to `/`.
 - _Beers_. ----> Should point to `/beers`.
 - _Random Beer_. ----> Should point to `/random-beers`.
-
-![image](https://res.cloudinary.com/drakarzamael/image/upload/v1579233962/ironlabs/insomnia.jpg)
 
 ## Iteration 2 - The Beers Route
 
